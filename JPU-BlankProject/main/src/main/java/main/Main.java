@@ -10,7 +10,7 @@ import view.View;
  * @author Jean-Aymeric Diet
  */
 public abstract class Main {
-
+//test
 	/**
 	 * The main method.
 	 *
