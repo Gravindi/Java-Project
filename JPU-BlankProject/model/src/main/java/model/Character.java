@@ -1,9 +1,13 @@
 package model;
 
-import javax.swing.text.Position;
+import contract.Direction;
 
 public class Character extends Mobile {
 	
+	public Character(Direction direction, Dimension dimension) {
+		super(dimension);
+	}
+
 	public boolean isplayer(){
 		return false;
 		
@@ -30,7 +34,8 @@ public class Character extends Mobile {
 		
 	}
 	
-	private Direction Lorann ( Position position){
+	private Direction Lorann(Position position){
+		return null;
 		
 	}
 	
