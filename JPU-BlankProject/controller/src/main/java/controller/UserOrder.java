@@ -1,5 +1,7 @@
 package controller;
 
+import contract.Order;
+
 public class UserOrder {
 	
 	private int player;
