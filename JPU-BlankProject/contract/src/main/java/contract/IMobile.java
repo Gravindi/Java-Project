@@ -1,5 +1,7 @@
 package contract;
 
+import java.awt.Dimension;
+
 public interface IMobile {
 	
 	public Direction getDirection();
