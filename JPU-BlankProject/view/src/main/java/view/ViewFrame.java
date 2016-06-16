@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
@@ -7,6 +8,7 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import contract.IController;
 import contract.IModel;
@@ -131,8 +133,13 @@ class ViewFrame extends JFrame implements KeyListener {
 		this.setResizable(false);
 		this.addKeyListener(this);
 		this.setContentPane(new ViewPanel(this));
-		this.setSize(400 + this.getInsets().left + this.getInsets().right, 60 + this.getInsets().top + this.getInsets().bottom);
+		this.setSize(600 + this.getInsets().left + this.getInsets().right, 400 + this.getInsets().top + this.getInsets().bottom);
 		this.setLocationRelativeTo(null);
+		this.setTitle("Lorann");
+		JPanel pan = new JPanel();
+		pan.setBackground(Color.black);
+		this.setContentPane(pan);               
+		this.setVisible(true);
 	}
 
 	/**
