@@ -1,6 +1,8 @@
 package model;
 
-public class Position {
+import contract.IPosition;
+
+public class Position implements IPosition {
 	
 	private int x;
 

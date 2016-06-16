@@ -1,16 +1,14 @@
 package contract;
 
-import java.awt.Dimension;
-
 public interface IMobile {
 	
 	public Direction getDirection();
 	
 	public void setDirection();
 	
-	public Position getPosition();
+	public IPosition getPosition();
 	
-	public Dimension getDimension();
+	public IDimension getDimension();
 	
 	public int getWidth();
 	
