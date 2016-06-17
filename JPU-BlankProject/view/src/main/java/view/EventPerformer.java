@@ -3,6 +3,7 @@ package view;
 import java.awt.event.KeyEvent;
 
 import contract.IOrderPerformer;
+import contract.IUserOrder;
 
 public class EventPerformer {
 	
@@ -14,8 +15,8 @@ public class EventPerformer {
 		
 	}
 	
-	private UserOrder keyCodeToUserOrder(int keycode){
-		
+	private IUserOrder keyCodeToUserOrder(int keycode){
+		return null;
 	}
 
 }
