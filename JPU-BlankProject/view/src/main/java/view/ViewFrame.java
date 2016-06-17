@@ -6,6 +6,7 @@ import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -133,12 +134,25 @@ class ViewFrame extends JFrame implements KeyListener {
 		this.setResizable(false);
 		this.addKeyListener(this);
 		this.setContentPane(new ViewPanel(this));
-		this.setSize(600 + this.getInsets().left + this.getInsets().right, 400 + this.getInsets().top + this.getInsets().bottom);
+		this.setSize(704 + this.getInsets().left + this.getInsets().right, 480 + this.getInsets().top + this.getInsets().bottom);
 		this.setLocationRelativeTo(null);
 		this.setTitle("Lorann");
 		JPanel pan = new JPanel();
 		pan.setBackground(Color.black);
 		this.setContentPane(pan);               
+		
+		
+		JButton bouton = new JButton("Map 1");
+		JButton bouton2 = new JButton("Map 2");
+		JButton bouton3 = new JButton("Map 3");
+		JButton bouton4 = new JButton("Map 4");
+		JButton bouton5 = new JButton("Map 5");
+		pan.add(bouton);
+		pan.add(bouton2);
+		pan.add(bouton3);
+		pan.add(bouton4);
+		pan.add(bouton5);
+		this.setContentPane(pan);
 		this.setVisible(true);
 	}
 
