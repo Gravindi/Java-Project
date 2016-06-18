@@ -1,7 +1,10 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GraphicsConfiguration;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -138,22 +141,32 @@ class ViewFrame extends JFrame implements KeyListener {
 		this.setLocationRelativeTo(null);
 		this.setTitle("Lorann");
 		JPanel pan = new JPanel();
+		//pan.setBackground(Color.black);
+		//this.setContentPane(pan);               
 		pan.setBackground(Color.black);
-		this.setContentPane(pan);               
-		
+		pan.setLayout(new GridBagLayout());
+	    GridBagConstraints gbc = new GridBagConstraints();
 		
 		JButton bouton = new JButton("Map 1");
+		bouton.setPreferredSize(new Dimension(120, 70));
 		JButton bouton2 = new JButton("Map 2");
+		bouton2.setPreferredSize(new Dimension(120, 70));
 		JButton bouton3 = new JButton("Map 3");
+		bouton3.setPreferredSize(new Dimension(120, 70));
 		JButton bouton4 = new JButton("Map 4");
+		bouton4.setPreferredSize(new Dimension(120, 70));
 		JButton bouton5 = new JButton("Map 5");
-		pan.add(bouton);
-		pan.add(bouton2);
-		pan.add(bouton3);
-		pan.add(bouton4);
-		pan.add(bouton5);
-		this.setContentPane(pan);
+		bouton5.setPreferredSize(new Dimension(120, 70));
+	
+	    gbc.gridx = GridBagConstraints.HORIZONTAL;
+	    pan.add(bouton, gbc);
+	    pan.add(bouton2, gbc);
+	    pan.add(bouton3, gbc);
+	    pan.add(bouton4, gbc);
+	    pan.add(bouton5, gbc);	    
+	    this.setContentPane(pan);
 		this.setVisible(true);
+			
 	}
 
 	/**

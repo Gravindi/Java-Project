@@ -2,8 +2,8 @@ package contract;
 
 public interface IUserOrder {
 
-	int getPlayer();
+	public int getPlayer();
 
-	Order getOrder();
+	public Order getOrder();
 
 }
