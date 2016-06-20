@@ -120,9 +120,13 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
+				type_element = resultSet.getString("type_element");
+				pos_x = resultSet.getInt("pos_x");
+				pos_y = resultSet.getInt("pos_y");
 				do{
 					helloWorld = new HelloWorld(resultSet.getString("type_element"), resultSet.getInt("pos_x"), resultSet.getInt("pos_y"));
 					System.out.println(resultSet.getString("type_element") + "\t" + resultSet.getInt("pos_x") + "\t" + resultSet.getInt("pos_y"));
+					CreateMap createMap = new CreateMap(type_element, pos_x, pos_y);
 				}while(resultSet.next());
 			}
 			return helloWorld;

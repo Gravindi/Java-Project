@@ -11,6 +11,8 @@ public interface IController {
 	 * Control.
 	 */
 	public void control();
+	
+	public void loadMessage();
 
 	/**
 	 * Order perform.

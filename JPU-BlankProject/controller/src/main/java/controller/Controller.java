@@ -58,6 +58,10 @@ public class Controller implements IController {
 	private void setModel(final IModel model) {
 		this.model = model;
 	}
+	
+	public void loadMessage(){
+		this.model.loadMessage();
+	}
 
 	/*
 	 * (non-Javadoc)

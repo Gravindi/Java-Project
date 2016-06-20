@@ -15,7 +15,6 @@ import contract.IView;
  * @author Jean-Aymeric Diet
  */
 public class View implements IView, Runnable {
-
 	/** The frame. */
 	private final ViewFrame viewFrame;
 
@@ -29,7 +28,7 @@ public class View implements IView, Runnable {
 		this.viewFrame = new ViewFrame(model);
 		SwingUtilities.invokeLater(this);
 	}
-
+	
 	/**
 	 * Key code to controller order.
 	 *

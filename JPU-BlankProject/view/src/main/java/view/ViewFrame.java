@@ -8,7 +8,6 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -176,11 +175,11 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	    
 
 		button.addActionListener(new ButtonListener1());
-		button2.addActionListener(new ButtonListener2());
+		button2.addActionListener(new ButtonListener2(controller));
 		button3.addActionListener(new ButtonListener3());
 		button4.addActionListener(new ButtonListener4());
 		button5.addActionListener(new ButtonListener5());
-	    
+		
 	    this.setContentPane(pan);
 		this.setVisible(true);
 			
