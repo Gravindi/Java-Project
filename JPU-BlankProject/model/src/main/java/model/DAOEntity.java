@@ -71,7 +71,7 @@ abstract class DAOEntity<E extends Entity> {
 	 *          the id
 	 * @return the e
 	 */
-	public abstract E find(int id);
+	//public abstract E find(int id);
 
 	/**
 	 * Find.
@@ -80,6 +80,9 @@ abstract class DAOEntity<E extends Entity> {
 	 *          the key
 	 * @return the e
 	 */
-	public abstract E find(String key);
+	//public abstract E find(String key);
+	
+	
+	public abstract E find();
 
 }

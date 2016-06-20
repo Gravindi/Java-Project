@@ -62,7 +62,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	 *
 	 * @see model.DAOEntity#find(int)
 	 */
-	@Override
+	/* @Override
 	public HelloWorld find(final int id) {
 		HelloWorld helloWorld = new HelloWorld();
 
@@ -80,14 +80,14 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			e.printStackTrace();
 		}
 		return null;
-	}
+	}*/
 
 	/*
 	 * (non-Javadoc)
 	 *
 	 * @see model.DAOEntity#find(java.lang.String)
 	 */
-	@Override
+	/* @Override
 	public HelloWorld find(final String key) {
 		HelloWorld helloWorld = new HelloWorld();
 
@@ -99,6 +99,31 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
 				helloWorld = new HelloWorld(resultSet.getInt("id"), key, resultSet.getString("message"));
+			}
+			return helloWorld;
+		} catch (final SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}*/
+	
+	@Override
+	public HelloWorld find() {
+		String type_element = null;
+		int pos_x = 0;
+		int pos_y = 0;
+		HelloWorld helloWorld = new HelloWorld(type_element, pos_x, pos_y);
+
+		try {
+			final String sql = "{call createmap2()}";
+			final CallableStatement call = this.getConnection().prepareCall(sql);
+			call.execute();
+			final ResultSet resultSet = call.getResultSet();
+			if (resultSet.first()) {
+				do{
+					helloWorld = new HelloWorld(resultSet.getString("type_element"), resultSet.getInt("pos_x"), resultSet.getInt("pos_y"));
+					System.out.println(resultSet.getString("type_element") + "\t" + resultSet.getInt("pos_x") + "\t" + resultSet.getInt("pos_y"));
+				}while(resultSet.next());
 			}
 			return helloWorld;
 		} catch (final SQLException e) {

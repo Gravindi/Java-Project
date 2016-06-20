@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GraphicsConfiguration;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -11,6 +12,7 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -22,7 +24,7 @@ import contract.IModel;
  *
  * @author Jean-Aymeric Diet
  */
-class ViewFrame extends JFrame implements KeyListener {
+class ViewFrame extends JFrame /*implements KeyListener*/ {
 
 	/** The model. */
 	private IModel						model;
@@ -31,6 +33,8 @@ class ViewFrame extends JFrame implements KeyListener {
 	private IController				controller;
 	/** The Constant serialVersionUID. */
 	private static final long	serialVersionUID	= -697358409737458175L;
+	
+	private JLabel text = new JLabel("Choice level");
 
 	/**
 	 * Instantiates a new view frame.
@@ -135,35 +139,48 @@ class ViewFrame extends JFrame implements KeyListener {
 		this.setModel(model);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
-		this.addKeyListener(this);
+		//this.addKeyListener(this);
 		this.setContentPane(new ViewPanel(this));
 		this.setSize(704 + this.getInsets().left + this.getInsets().right, 480 + this.getInsets().top + this.getInsets().bottom);
 		this.setLocationRelativeTo(null);
 		this.setTitle("Lorann");
 		JPanel pan = new JPanel();
-		//pan.setBackground(Color.black);
+		Font police = new Font("Tahoma", Font.BOLD, 16); 
 		//this.setContentPane(pan);               
-		pan.setBackground(Color.black);
+		//pan.setBackground(Color.black);
 		pan.setLayout(new GridBagLayout());
 	    GridBagConstraints gbc = new GridBagConstraints();
+
+		text.setFont(police);
+		text.setForeground(Color.BLACK);
+		text.setHorizontalAlignment(JLabel.CENTER);
 		
-		JButton bouton = new JButton("Map 1");
-		bouton.setPreferredSize(new Dimension(120, 70));
-		JButton bouton2 = new JButton("Map 2");
-		bouton2.setPreferredSize(new Dimension(120, 70));
-		JButton bouton3 = new JButton("Map 3");
-		bouton3.setPreferredSize(new Dimension(120, 70));
-		JButton bouton4 = new JButton("Map 4");
-		bouton4.setPreferredSize(new Dimension(120, 70));
-		JButton bouton5 = new JButton("Map 5");
-		bouton5.setPreferredSize(new Dimension(120, 70));
+		JButton button = new JButton("Level 1");
+		button.setPreferredSize(new Dimension(120, 70));
+		JButton button2 = new JButton("Level 2");
+		button2.setPreferredSize(new Dimension(120, 70));
+		JButton button3 = new JButton("Level 3");
+		button3.setPreferredSize(new Dimension(120, 70));
+		JButton button4 = new JButton("Level 4");
+		button4.setPreferredSize(new Dimension(120, 70));
+		JButton button5 = new JButton("Level 5");
+		button5.setPreferredSize(new Dimension(120, 70));
 	
 	    gbc.gridx = GridBagConstraints.HORIZONTAL;
-	    pan.add(bouton, gbc);
-	    pan.add(bouton2, gbc);
-	    pan.add(bouton3, gbc);
-	    pan.add(bouton4, gbc);
-	    pan.add(bouton5, gbc);	    
+	    pan.add(text, gbc);
+	    pan.add(button, gbc);
+	    pan.add(button2, gbc);
+	    pan.add(button3, gbc);
+	    pan.add(button4, gbc);
+	    pan.add(button5, gbc);	
+	    
+
+		button.addActionListener(new ButtonListener1());
+		button2.addActionListener(new ButtonListener2());
+		button3.addActionListener(new ButtonListener3());
+		button4.addActionListener(new ButtonListener4());
+		button5.addActionListener(new ButtonListener5());
+	    
 	    this.setContentPane(pan);
 		this.setVisible(true);
 			
@@ -193,9 +210,9 @@ class ViewFrame extends JFrame implements KeyListener {
 	 *
 	 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
 	 */
-	public void keyPressed(final KeyEvent e) {
+	/*public void keyPressed(final KeyEvent e) {
 		this.getController().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
-	}
+	}*/
 
 	/*
 	 * (non-Javadoc)

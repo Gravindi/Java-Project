@@ -15,6 +15,10 @@ class HelloWorld extends Entity {
 
 	/** The message. */
 	private String	message;
+	
+	private String type_element;
+	private int pos_x;
+	private int pos_y;
 
 	/**
 	 * Instantiates a new hello world.
@@ -26,18 +30,40 @@ class HelloWorld extends Entity {
 	 * @param message
 	 *          the message
 	 */
-	public HelloWorld(final int id, final String key, final String message) {
-		this.setId(id);
-		this.setKey(key);
-		this.setMessage(message);
+	public HelloWorld(final String type_element, final int pos_x, final int pos_y) {
+		this.setType_element(type_element);
+		this.setPos_x(pos_x);
+		this.setPos_y(pos_y);
+	}
+
+	public String getType_element() {
+		return type_element;
+	}
+
+	public void setType_element(String type_element) {
+		this.type_element = type_element;
+	}
+
+	public int getPos_x() {
+		return pos_x;
+	}
+
+	public void setPos_x(int pos_x) {
+		this.pos_x = pos_x;
+	}
+
+	public int getPos_y() {
+		return pos_y;
+	}
+
+	public void setPos_y(int pos_y) {
+		this.pos_y = pos_y;
 	}
 
 	/**
 	 * Instantiates a new hello world.
 	 */
-	public HelloWorld() {
-		this(0, "", "");
-	}
+
 
 	/**
 	 * Gets the id.
