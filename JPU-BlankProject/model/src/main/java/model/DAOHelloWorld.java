@@ -109,11 +109,10 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 	
 	@Override
 	public HelloWorld find() {
-		String type_element = null;
-		int pos_x = 0;
-		int pos_y = 0;
-		HelloWorld helloWorld = new HelloWorld(type_element, pos_x, pos_y);
-
+		String type_element;
+		int pos_x;
+		int pos_y;
+		HelloWorld helloWorld;
 		try {
 			final String sql = "{call createmap2()}";
 			final CallableStatement call = this.getConnection().prepareCall(sql);
@@ -127,7 +126,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 					helloWorld = new HelloWorld(resultSet.getString("type_element"), resultSet.getInt("pos_x"), resultSet.getInt("pos_y"));
 				}while(resultSet.next());
 			}
-			return helloWorld;
+			return null;
 		} catch (final SQLException e) {
 			e.printStackTrace();
 		}

@@ -4,10 +4,14 @@ import java.io.IOException;
 
 public class CreateElement {
 	
+	Element element;
+	
 	public CreateElement(String type_element, int pos_x, int pos_y) throws IOException{
+		System.out.println(type_element);
 		switch (type_element) {
 		case "L" : 
 			Array.Character.add(new Character(pos_x, pos_y));
+			element.add(Array.Character);
 			break;
 		case "E" :
 			Array.Energycell.add(new Energycell(pos_x, pos_y));

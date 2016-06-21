@@ -36,6 +36,7 @@ class HelloWorld extends Entity {
 	 */
 	public HelloWorld(final String type_element, final int pos_x, final int pos_y) {
 		this.setType_element(type_element);
+		System.out.println(type_element);
 		this.setPos_x(pos_x);
 		this.setPos_y(pos_y);
 		try {

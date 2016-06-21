@@ -7,23 +7,23 @@ public class Character extends Mobile {
 	public Character(int pos_x, int pos_y) {
 		super(pos_x, pos_y);
 		while(movement == false){
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_b.png/");
+		image = ImageLoader.loadImage("/lorann_b.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_bl.png/");
+		image = ImageLoader.loadImage("/lorann_bl.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_b.png/");
+		image = ImageLoader.loadImage("/lorann_b.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_l.png/");
+		image = ImageLoader.loadImage("/lorann_l.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_ul.png/");
+		image = ImageLoader.loadImage("/lorann_ul.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_u.png/");
+		image = ImageLoader.loadImage("/lorann_u.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_ur.png/");
+		image = ImageLoader.loadImage("/lorann_ur.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_r.png/");
+		image = ImageLoader.loadImage("/lorann_r.png");
 		g.drawImage(image, pos_x, pos_y, null);
-		image = ImageLoader.loadImage("/textures/src/main/resources/lorann_br.png/");
+		image = ImageLoader.loadImage("/lorann_br.png");
 		g.drawImage(image, pos_x, pos_y, null);
 		}
 	}

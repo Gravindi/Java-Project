@@ -1,15 +1,9 @@
 package model;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.image.ImageObserver;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.imageio.ImageIO;
 
-public class Array {
+public class Array extends Element {
 	
 		static ArrayList <Bone> Bone = new ArrayList<Bone>();
 		static ArrayList <Energycell> Energycell = new ArrayList<Energycell>();
