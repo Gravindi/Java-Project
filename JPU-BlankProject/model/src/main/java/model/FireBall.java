@@ -15,8 +15,8 @@ public class FireBall extends Mobile {
 		
 	}
 	
-	public FireBall(Dimension dimension){
-		super(dimension);
+	public FireBall(int pos_x, int pos_y){
+		super(pos_x, pos_y);
 	}
 	
 	

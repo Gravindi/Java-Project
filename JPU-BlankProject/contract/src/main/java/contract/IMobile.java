@@ -1,9 +1,7 @@
 package contract;
 
 public interface IMobile {
-	
-	public Direction getDirection();
-	
+		
 	public void setDirection();
 	
 	public IPosition getPosition();

@@ -6,6 +6,9 @@ public class Gold extends Item {
 	
 	public Gold(int pos_x, int pos_y) {
 
+		image = ImageLoader.loadImage("/textures/src/main/resources/purse.png/");
+		
+		g.drawImage(image, pos_x, pos_y, null);
 	}
 
 	public int getScore(){

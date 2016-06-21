@@ -1,6 +1,8 @@
 package model;
 
+import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 
 import contract.Direction;
 
@@ -9,7 +11,8 @@ public class Mobile {
 	private final static int SPEED = 5;
 	private final static int WIDTH = 32;
 	private final static int HEIGHT = 32;
-	private Image image;
+	protected BufferedImage image;
+	protected Graphics g;
 
 	public Mobile (int pos_x, int pos_y){
 		
