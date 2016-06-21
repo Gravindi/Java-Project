@@ -14,6 +14,7 @@ public class Model extends Observable implements IModel {
 
 	/** The message. */
 	private String message;
+	private int map;
 
 	/**
 	 * Instantiates a new model.
