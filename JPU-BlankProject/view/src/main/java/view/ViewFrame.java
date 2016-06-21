@@ -35,6 +35,11 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	
 	private JLabel text = new JLabel("Choice level");
 
+	JButton button = new JButton("Level 1");
+	JButton button2 = new JButton("Level 2");
+	JButton button3 = new JButton("Level 3");
+	JButton button4 = new JButton("Level 4");
+	JButton button5 = new JButton("Level 5");
 	/**
 	 * Instantiates a new view frame.
 	 *
@@ -107,6 +112,12 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	 */
 	protected void setController(final IController controller) {
 		this.controller = controller;
+
+		button.addActionListener(new ButtonListener1());
+		button2.addActionListener(new ButtonListener2(controller));
+		button3.addActionListener(new ButtonListener3());
+		button4.addActionListener(new ButtonListener4());
+		button5.addActionListener(new ButtonListener5());
 	}
 
 	/**
@@ -154,15 +165,10 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 		text.setForeground(Color.BLACK);
 		text.setHorizontalAlignment(JLabel.CENTER);
 		
-		JButton button = new JButton("Level 1");
 		button.setPreferredSize(new Dimension(120, 70));
-		JButton button2 = new JButton("Level 2");
 		button2.setPreferredSize(new Dimension(120, 70));
-		JButton button3 = new JButton("Level 3");
 		button3.setPreferredSize(new Dimension(120, 70));
-		JButton button4 = new JButton("Level 4");
 		button4.setPreferredSize(new Dimension(120, 70));
-		JButton button5 = new JButton("Level 5");
 		button5.setPreferredSize(new Dimension(120, 70));
 	
 	    gbc.gridx = GridBagConstraints.HORIZONTAL;
@@ -171,14 +177,7 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	    pan.add(button2, gbc);
 	    pan.add(button3, gbc);
 	    pan.add(button4, gbc);
-	    pan.add(button5, gbc);	
-	    
-
-		button.addActionListener(new ButtonListener1());
-		button2.addActionListener(new ButtonListener2(controller));
-		button3.addActionListener(new ButtonListener3());
-		button4.addActionListener(new ButtonListener4());
-		button5.addActionListener(new ButtonListener5());
+	    pan.add(button5, gbc);
 		
 	    this.setContentPane(pan);
 		this.setVisible(true);

@@ -85,4 +85,6 @@ abstract class DAOEntity<E extends Entity> {
 	
 	public abstract E find();
 
+	//public abstract E find(int map);
+
 }
