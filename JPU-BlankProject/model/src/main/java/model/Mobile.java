@@ -11,7 +11,7 @@ public class Mobile {
 	private final static int HEIGHT = 32;
 	private Image image;
 
-	public Mobile (Dimension dimension){
+	public Mobile (int pos_x, int pos_y){
 		
 	}
 	public Direction getDirection(){

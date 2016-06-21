@@ -4,8 +4,8 @@ import contract.Direction;
 
 public class Character extends Mobile {
 	
-	public Character(Direction direction, Dimension dimension) {
-		super(dimension);
+	public Character(int pos_x, int pos_y) {
+		super(pos_x, pos_y);
 	}
 
 	public boolean isplayer(){

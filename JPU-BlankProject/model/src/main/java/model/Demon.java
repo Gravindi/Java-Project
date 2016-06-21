@@ -6,9 +6,9 @@ public class Demon extends Mobile {
 	private Position position;
 	private String image;
 	private static Dimension dimension;
-	
-	public Demon(int demonNumber, Position position, String image){
-		super(dimension);
+
+	public Demon(int pos_x, int pos_y) {
+		super(pos_x, pos_y);
 	}
 	
 
