@@ -9,7 +9,6 @@ import contract.IController;
 
 public class ButtonListener2 implements ActionListener {
 	private IController controller;
-	String type_element;
 	public void setController(final IController controller){
 		this.controller = controller;
 	}
@@ -26,5 +25,6 @@ public class ButtonListener2 implements ActionListener {
 		test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		test.setSize(704, 480);
 		test.setVisible(true);
+		
 	}
 }

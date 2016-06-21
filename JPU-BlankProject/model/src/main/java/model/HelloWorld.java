@@ -1,5 +1,7 @@
 package model;
 
+import java.io.IOException;
+
 /**
  * The Class HelloWorld.
  *
@@ -19,6 +21,8 @@ class HelloWorld extends Entity {
 	private String type_element;
 	private int pos_x;
 	private int pos_y;
+	
+	CreateElement createElement;
 
 	/**
 	 * Instantiates a new hello world.
@@ -34,6 +38,11 @@ class HelloWorld extends Entity {
 		this.setType_element(type_element);
 		this.setPos_x(pos_x);
 		this.setPos_y(pos_y);
+		try {
+			createElement = new CreateElement(type_element, pos_x, pos_y);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public String getType_element() {
