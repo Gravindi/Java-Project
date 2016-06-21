@@ -7,7 +7,6 @@ public class UserOrder {
 	private int player;
 	
 	public void controllerOrder(int player, Order order){
-		
 	}
 	
 	public Order getOrder(){
