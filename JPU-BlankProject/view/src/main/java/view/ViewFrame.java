@@ -3,11 +3,13 @@ package view;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GraphicsConfiguration;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -34,6 +36,9 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	private static final long	serialVersionUID	= -697358409737458175L;
 	
 	private JLabel text = new JLabel("Choice level");
+	
+	BufferedImage image;
+	Graphics g;
 
 	JButton button = new JButton("Level 1");
 	JButton button2 = new JButton("Level 2");
@@ -164,6 +169,9 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 		text.setFont(police);
 		text.setForeground(Color.BLACK);
 		text.setHorizontalAlignment(JLabel.CENTER);
+		
+		image = ImageLoader.loadImage("/bone.png");
+		g.drawImage(image, 32, 32, null);
 		
 		button.setPreferredSize(new Dimension(120, 70));
 		button2.setPreferredSize(new Dimension(120, 70));

@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 
 import contract.Direction;
 
-public class Mobile {
+public class Mobile extends Element {
 	
 	private final static int SPEED = 5;
 	private final static int WIDTH = 32;

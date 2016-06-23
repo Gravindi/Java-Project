@@ -3,7 +3,7 @@ package model;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-public class Motionless {
+public class Motionless extends Element {
 
 	protected BufferedImage image;
 	private final static int WIDTH = 32;
