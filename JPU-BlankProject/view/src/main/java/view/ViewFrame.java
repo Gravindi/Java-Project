@@ -105,9 +105,9 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	 *
 	 * @return the controller
 	 */
-	private IController getController() {
+	/*private IController getController() {
 		return this.controller;
-	}
+	}*/
 
 	/**
 	 * Sets the controller.
@@ -207,9 +207,9 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	 *
 	 * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
 	 */
-	public void keyTyped(final KeyEvent e) {
+	/*public void keyTyped(final KeyEvent e) {
 
-	}
+	}*/
 
 	/*
 	 * (non-Javadoc)
@@ -225,7 +225,7 @@ class ViewFrame extends JFrame /*implements KeyListener*/ {
 	 *
 	 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
 	 */
-	public void keyReleased(final KeyEvent e) {
+	/*public void keyReleased(final KeyEvent e) {
 
-	}
+	}*/
 }
