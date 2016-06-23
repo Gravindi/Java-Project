@@ -64,7 +64,8 @@ public class ModelTest {
 	 */
 	@Test
 	public void testGetMessage() {
-		Assert.assertEquals("", this.model.getMessage());
+		String message = "";
+		Assert.assertEquals(message, this.model.getMessage());
 	}
 
 	/**
